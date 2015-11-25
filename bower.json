@@ -1,0 +1,8 @@
+{
+  "name": "tedimg",
+  "private": true,
+  "dependencies": {
+    "Materialize": "materialize#~0.97.3",
+    "jquery": "~2.1.4"
+  }
+}

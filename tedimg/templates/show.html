@@ -1,0 +1,26 @@
+{% extends "banner.html" %}
+
+{% block banner_content %}
+<h1 class="header center orange-text">Upload successful!</h1>
+<div class="row center">
+  <a href="{{ image }}" class="btn-large waves-effect waves-light light-blue">Direct link</a>
+</div>
+{% endblock %}
+
+
+{% block section_content %}
+<div class="row">
+  <div class="col s12 m4">
+    <h5 class="center">HTML</h5>
+    <pre>&lt;a href="{{ image }}"&gt;&lt;img src="{{ image }}"&gt;&lt;/a&gt;</pre>
+  </div>
+  <div class="col s12 m4">
+    <h5 class="center">Markdown</h5>
+    <pre>[![Image]({{ image }})]({{ image }})</pre>
+  </div>
+  <div class="col s12 m4">
+    <h5 class="center">BBCode</h5>
+    <pre>[url={{ image }}][img]{{ image }}[/img][/url]</pre>
+  </div>
+</div>
+{% endblock %}

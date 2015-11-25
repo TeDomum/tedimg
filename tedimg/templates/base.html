@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{{ config["SITE_NAME"] }}</title>
+  <link href="/static/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="blue" role="navigation">
+    <div class="nav-wrapper container"><a href="/" class="brand-logo">TedImage</a>
+      <ul class="right">
+        <li><a href="#">Source code</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="page-footer blue">
+    <div class="footer-copyright">
+      <div class="container">
+      Made with love using Python, JS, Flask, Gulp, Bower, and Materialize
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
