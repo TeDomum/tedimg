@@ -16,15 +16,15 @@
 <div class="row">
   <div class="col s12 m4">
     <h5 class="center">HTML</h5>
-    <pre>&lt;a href="{{ image }}"&gt;&lt;img src="{{ image }}"&gt;&lt;/a&gt;</pre>
+    <pre>&lt;a href="{{ image }}"&gt;&lt;img src="{{ thumb }}"&gt;&lt;/a&gt;</pre>
   </div>
   <div class="col s12 m4">
     <h5 class="center">Markdown</h5>
-    <pre>[![Image]({{ image }})]({{ image }})</pre>
+    <pre>[![Image]({{ thumb }})]({{ image }})</pre>
   </div>
   <div class="col s12 m4">
     <h5 class="center">BBCode</h5>
-    <pre>[url={{ image }}][img]{{ image }}[/img][/url]</pre>
+    <pre>[url={{ image }}][img]{{ thumb }}[/img][/url]</pre>
   </div>
 </div>
 {% endblock %}
