@@ -5,12 +5,13 @@ import os
 import binascii
 import requests
 import io
+import urllib
 
 
 def get_image(root, name):
     """ Try and get basic image attributes.
     """
-    filename = os.path.basename(name)
+    filename = urllib.parse.quote(os.path.basename(name))
     return (root + os.path.join(app.config["FULL_WEB"], filename),
             root + os.path.join(app.config["THUMB_WEB"], filename))
 
