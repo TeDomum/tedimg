@@ -3,6 +3,8 @@ from PIL import Image
 
 import os
 import binascii
+import requests
+import io
 
 
 def get_image(root, name):
@@ -23,10 +25,14 @@ def image_from_file(file_storage):
 def image_from_url(url):
     """ Try and download an image from the given url.
     """
+    response = requests.get(url)
+    image = Image.open(io.BytesIO(response.content))
+    return image
 
 
 def save_with_thumbnail(image, filename):
     dest = "."
+    print(filename)
     while os.path.exists(os.path.join(app.config["FULL_STORAGE"], dest)):
         filename, ext = os.path.splitext(filename)
         random = binascii.hexlify(os.urandom(3)).decode('utf8')

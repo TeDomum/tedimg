@@ -18,21 +18,20 @@ def show(path):
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    uploaded = flask.request.files['file']
     url = flask.request.form['url']
+    uploaded = flask.request.files['file']
     # Get an image object from the uploaded image or URL
     try:
         if uploaded:
             image = images.image_from_file(uploaded)
             filename = os.path.basename(uploaded.filename)
         elif url:
-            image = images.image_from_file(uploaded)
-            filename = os.path.basename(uploaded.filename)
+            image = images.image_from_url(url)
+            filename = os.path.basename(url)
         else:
             return flask.render_template("error.html", message="Missing image.")
     except Exception as error:
-        raise
-        return flask.render_template("error.html", message="Could not read your image.")
+        return flask.render_template("error.html", message="Could not store your image.")
     # Save the image to a local file
     result = images.save_with_thumbnail(image, filename)
     return flask.redirect("/show/" + result)
