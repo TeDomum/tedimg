@@ -13,11 +13,7 @@ def index():
 def show(path):
     root = flask.url_for("index", _external=True)
     image, thumb = images.get_image(root, path)
-    return flask.render_template(
-        "show.html",
-        image=image, thumb=thumb,
-        thumb_size=app.config["THUMB_SIZE"]
-    )
+    return flask.render_template("show.html", image=image, thumb=thumb)
 
 
 @app.route('/upload', methods=['POST'])

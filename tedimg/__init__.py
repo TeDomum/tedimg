@@ -3,8 +3,11 @@ app = Flask(__name__)
 
 app.config.update(
     SITE_NAME="TedImg",
-    STORAGE_PATH="/tmp/images",
-    WEB_PATH="/images",
+    FULL_STORAGE="/tmp/images",
+    THUMB_STORAGE="/tmp/images/thumb",
+    FULL_WEB="image",
+    THUMB_WEB="images/thumb",
+    THUMB_SIZE=100
 )
 
 import tedimg.views
