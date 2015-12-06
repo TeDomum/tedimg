@@ -3,6 +3,8 @@ app = Flask(__name__)
 
 app.config.update(
     SITE_NAME="TedImg",
+    SOURCE_URL="https://git.tedomum.net/kaiyou/tedimg",
+    HELP_URL="https://git.tedomum.net/kaiyou/tedimg",
     FULL_STORAGE="/tmp/images",
     THUMB_STORAGE="/tmp/images/thumb",
     FULL_WEB="image",
