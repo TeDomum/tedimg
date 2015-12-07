@@ -1,6 +1,8 @@
 from tedimg import app
 from flask import send_from_directory
 
+import os
+
 app.config.update(
     SITE_NAME="TeDomum Images",
     FULL_STORAGE="./tedimg/static/images",

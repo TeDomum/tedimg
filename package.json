@@ -2,11 +2,11 @@
   "name": "tedimg",
   "dependencies": {
     "gulp-concat": "^2.6.0",
-    "gulp-replace": "^0.5.4",
+    "gulp-replace": "^0.5.4"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-bower": "0.0.11",
-    "gulp-notify": "^2.2.0",
+    "gulp-notify": "^2.2.0"
   }
 }
