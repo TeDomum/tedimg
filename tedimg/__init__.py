@@ -9,8 +9,8 @@ app.config.update(
     SITE_NAME=os.environ.get("SITE_NAME", "TedImg"),
     SOURCE_URL="https://git.tedomum.net/kaiyou/tedimg",
     HELP_URL="https://git.tedomum.net/kaiyou/tedimg",
-    FULL_STORAGE=os.environ.get("FULL_STORAGE", "/tmp/images"),
-    THUMB_STORAGE=os.environ.get("THUMB_STORAGE", "/tmp/images/thumb"),
+    FULL_STORAGE=os.environ.get("FULL_STORAGE", "/data"),
+    THUMB_STORAGE=os.environ.get("THUMB_STORAGE", "/data/thumb"),
     FULL_WEB=os.environ.get("FULL_WEB", "images"),
     THUMB_WEB=os.environ.get("THUMB_WEB", "images/thumb"),
     THUMB_SIZE=100
