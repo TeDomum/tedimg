@@ -10,4 +10,8 @@ $(document).ready(function() {
     }, 100);
   });
 
+  $("input.snippet").click(function() {
+    this.select();
+  })
+
 });

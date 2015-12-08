@@ -4,18 +4,18 @@
 <h1 class="header center orange-text">Upload your image!</h1>
 <form method="post" id="upload" action="/upload" enctype="multipart/form-data">
   <div class="file-field input-field">
-    <div class="btn light-blue">
-      <span>File</span>
+    <div>
+      <i class="material-icons left small">publish</i>
       <input type="file" name="file">
     </div>
     <div class="file-path-wrapper">
-      <input class="file-path validate" type="text" placeholder="Upload your image">
+      <input class="file-path validate" type="text" placeholder="Select your file">
     </div>
   </div>
 
   <div class="input-field">
       <i class="material-icons prefix">public</i>
-      <input id="icon_prefix" type="text" class="validate" name="url" placeholder="Or paste your url">
+      <input id="icon_prefix" type="text" class="validate" name="url" placeholder="Or paste your URL">
   </div>
 </form>
 {% endblock %}

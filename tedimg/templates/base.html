@@ -10,11 +10,8 @@
 </head>
 <body>
   <nav class="blue" role="navigation">
-    <div class="nav-wrapper container"><a href="/" class="brand-logo">{{ config["SITE_NAME"] }}</a>
-      <ul class="right">
-        <li><a href="{{ config["SOURCE_URL"] }}">Source code</a></li>
-        <li><a href="{{ config["HELP_URL"] }}">Help</a></li>
-      </ul>
+    <div class="nav-wrapper container">
+      <i class="material-icons left">image</i><a href="/" class="brand-logo">{{ config["SITE_NAME"] }}</a>
     </div>
   </nav>
 
@@ -24,7 +21,10 @@
   <footer class="page-footer blue">
     <div class="footer-copyright">
       <div class="container">
-      Made with love using Flask
+      Built with <i class="material-icons tiny">favorite</i> using <a class="white-text" href="http://flask.pocoo.org/">Flask</a>,
+      <a class="white-text" href="http://materializecss.com/">Materialize</a> and
+      <a class="white-text" href="http://gulpjs.com/">Gulp</a>
+      <span class="right"><i class="material-icons tiny">call_split</i> on <a class="white-text" href="https://github.com/kaiyou/tedimg">Github</a>.</a>
       </div>
     </div>
   </footer>
