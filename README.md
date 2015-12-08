@@ -3,6 +3,8 @@ Image upload with Flask
 
 No database, no additional features. Plain and simple image upload.
 
+![Screenshot](screenshot.png)
+
 Use the Docker image
 --------------------
 
