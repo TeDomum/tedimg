@@ -11,3 +11,16 @@ pre {
 input.snippet {
   font-family: monospace;
 }
+
+::-webkit-input-placeholder {
+    color:    #444;
+}
+:-moz-placeholder {
+    color:    #444;
+}
+::-moz-placeholder {
+    color:    #444;
+}
+:-ms-input-placeholder {
+    color:    #444;
+}
