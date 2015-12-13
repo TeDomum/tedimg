@@ -34,9 +34,10 @@ def image_from_url(url):
 def save_with_thumbnail(image, filename):
     dest = "."
     while os.path.exists(os.path.join(app.config["FULL_STORAGE"], dest)):
-        filename, ext = os.path.splitext(filename)
+        filename, _ = os.path.splitext(filename)
+        ext = image.format.lower()
         random = binascii.hexlify(os.urandom(3)).decode('utf8')
-        dest = "%s-%s%s" % (filename, random, ext)
+        dest = "%s-%s.%s" % (filename, random, ext)
     # Grab some configuration
     full_file = os.path.join(app.config["FULL_STORAGE"], dest)
     thumb_file = os.path.join(app.config["THUMB_STORAGE"], dest)

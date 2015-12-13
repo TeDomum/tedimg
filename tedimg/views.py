@@ -1,6 +1,7 @@
 from tedimg import app, images
 
 import flask
+import urllib
 import os
 
 
@@ -27,10 +28,12 @@ def upload():
             filename = os.path.basename(uploaded.filename)
         elif url:
             image = images.image_from_url(url)
-            filename = os.path.basename(url)
+            parsed = urllib.parse.urlparse(url)
+            filename = os.path.basename(parsed.path)
         else:
             return flask.render_template("error.html", message="Missing image.")
     except Exception as error:
+        __import__("traceback").print_exc()
         return flask.render_template("error.html", message="Could not store your image.")
     # Save the image to a local file
     result = images.save_with_thumbnail(image, filename)
