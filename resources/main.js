@@ -1,3 +1,13 @@
+// Import general CSS
+import 'materialize-css';
+import 'materialize-css/dist/css/materialize.css';
+
+// Import specific CSS
+import './main.css';
+
+// Javascript libs
+import $ from 'jquery';
+
 $(document).ready(function() {
 
   $("form#upload input").change(function() {

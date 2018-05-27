@@ -1,12 +1,16 @@
 {
   "name": "tedimg",
   "dependencies": {
-    "gulp-concat": "^2.6.0",
-    "gulp-replace": "^0.5.4"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-bower": "0.0.11",
-    "gulp-notify": "^2.2.0"
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "jquery": "^3.3.1",
+    "js-loader": "^0.1.1",
+    "materialize-css": "^0.100.2",
+    "resolve-url-loader": "^2.3.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
   }
 }
