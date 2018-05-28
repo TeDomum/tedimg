@@ -1,14 +1,19 @@
-FROM python:3
+FROM python:3-alpine
 
-RUN apt-get update \
- && apt-get install --no-install-recommends -y nginx supervisor \
- && apt-get clean
+RUN apk add --no-cache nginx supervisor
 
-ADD requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+ADD . /app
+WORKDIR /app
 
-ADD tedimg /tedimg
-ADD docker /config
+RUN apk add --no-cache nodejs \
+ && npm install \
+ && npm run build \
+ && rm -rf node_modules \
+ && apk del nodejs
+
+RUN apk add --no-cache gcc libjpeg-turbo-dev zlib zlib-dev \
+ && pip install -r /app/requirements.txt \
+ && apk del gcc libjpeg-turbo-dev zlib-dev
 
 EXPOSE 80
 
