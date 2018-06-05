@@ -11,9 +11,9 @@ RUN apk add --no-cache nodejs \
  && rm -rf node_modules \
  && apk del nodejs
 
-RUN apk add --no-cache gcc libjpeg-turbo-dev zlib zlib-dev \
+RUN apk add --no-cache --virtual build-dep gcc libjpeg-turbo-dev zlib zlib-dev \
  && pip install -r /app/requirements.txt \
- && apk del gcc libjpeg-turbo-dev zlib-dev
+ && apk del build-dep
 
 EXPOSE 80
 
