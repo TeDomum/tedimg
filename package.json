@@ -1,5 +1,9 @@
 {
   "name": "tedimg",
+  "scripts": {
+    "watch": "webpack -w",
+    "build": "webpack -p"
+  },
   "dependencies": {
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
