@@ -19,8 +19,8 @@ def show(path):
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    url = flask.request.form['url']
-    uploaded = flask.request.files['file']
+    url = flask.request.form.get('url')
+    uploaded = flask.request.files.get('file')
     # Get an image object from the uploaded image or URL
     try:
         if uploaded:
