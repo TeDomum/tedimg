@@ -1,5 +1,5 @@
 from tedimg import app
-from PIL import Image
+from PIL import Image, ImageSequence
 
 import os
 import binascii
@@ -43,7 +43,10 @@ def save_with_thumbnail(image, filename):
     thumb_file = os.path.join(app.config["THUMB_STORAGE"], dest)
     thumb_size = app.config["THUMB_SIZE"]
     # Save the image and thumbnail
-    image.save(full_file, format=image.format)
+    if image.format == 'GIF':
+        image.save(full_file, format=image.format, save_all=True)
+    else:
+        image.save(full_file, format=image.format)
     image.thumbnail((thumb_size, thumb_size))
     image.save(thumb_file, format=image.format)
     return dest
