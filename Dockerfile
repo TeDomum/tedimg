@@ -11,10 +11,11 @@ RUN apk add --no-cache nodejs \
  && rm -rf node_modules \
  && apk del nodejs
 
-RUN apk add --no-cache --virtual build-dep gcc libjpeg-turbo-dev zlib zlib-dev \
+RUN apk add --no-cache --virtual build-dep gcc linux-headers libc-dev \
+ && apk add --no-cache jpeg-dev zlib-dev \
  && pip install -r /app/requirements.txt \
  && apk del build-dep
 
 EXPOSE 80
 
-CMD /usr/bin/supervisord -c /config/supervisor.conf
+CMD /usr/bin/supervisord -c /app/docker/supervisor.conf
