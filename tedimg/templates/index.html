@@ -2,7 +2,7 @@
 
 {% block banner_content %}
 <h1 class="header center orange-text">Upload your image!</h1>
-<form method="post" id="upload" action="/upload" enctype="multipart/form-data">
+<form method="post" id="upload" action="{{ url_for('upload') }}" enctype="multipart/form-data">
   <div class="file-field input-field">
     <div>
       <i class="material-icons left small">publish</i>

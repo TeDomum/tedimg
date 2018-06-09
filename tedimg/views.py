@@ -37,4 +37,4 @@ def upload():
         return flask.render_template("error.html", message="Could not store your image.")
     # Save the image to a local file
     result = images.save_with_thumbnail(image, filename)
-    return flask.redirect("/show/" + result)
+    return flask.redirect(flask.url_for("show", path=result))
