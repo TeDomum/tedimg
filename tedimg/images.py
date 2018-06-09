@@ -12,8 +12,8 @@ def get_image(root, name):
     """ Try and get basic image attributes.
     """
     filename = urllib.parse.quote(os.path.basename(name))
-    return (root + os.path.join(app.config["FULL_WEB"], filename),
-            root + os.path.join(app.config["THUMB_WEB"], filename))
+    return (os.path.join(root, app.config["FULL_WEB"], filename),
+            os.path.join(root, app.config["THUMB_WEB"], filename))
 
 
 def image_from_file(file_storage):
